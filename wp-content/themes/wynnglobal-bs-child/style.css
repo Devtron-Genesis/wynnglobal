@@ -450,6 +450,7 @@ div#footer-widget h4 {
     color: rgb(19,43,68);
     font-size: 15px;
     font-weight: 400;
+    margin-bottom: 10px;
 }
 div#footer-widget p {
     color: #0f0f0f;

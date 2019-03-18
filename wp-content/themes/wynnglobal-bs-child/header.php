@@ -86,7 +86,7 @@
 	<div id="content" class="site-content">
     <?php 
         if ( is_front_page() ) {	
-            echo do_shortcode('[smartslider3 slider=2]');
+            echo do_shortcode('[smartslider3 slider=4]');
         }
     ?>
         </main><!-- #main -->
