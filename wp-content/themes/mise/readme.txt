@@ -3,7 +3,7 @@ Contributors: CrestaProject
 Tags: two-columns, right-sidebar, custom-colors, custom-menu, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, news, e-commerce, footer-widgets, custom-logo
 Requires at least: 4.5
 Tested up to: 5.1
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Mise WordPress Theme, Copyright 2018 Rizzo Andrea
@@ -32,6 +32,10 @@ Mise includes support for Infinite Scroll in Jetpack, WooCommerce and WPML.
 * Image example for slider section 3 ( https://www.pexels.com/photo/samsung-black-android-smartphone-226638/ ) Pexels Free photos for commercial and personal works, licensed under Creative Commons Zero (CC0)
 
 == Changelog ==
+
+= Version 1.5.6 =
+* Updated SmoothScroll to 1.4.9 version
+* Minor bug fixes
 
 = Version 1.5.5 =
 * Added the possibility to add custom Copyright text
