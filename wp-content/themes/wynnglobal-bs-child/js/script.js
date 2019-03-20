@@ -1,5 +1,8 @@
 jQuery(function($){
   $(document).ready(function() {
+    $('li.lang-item a.mega-menu-link').removeAttr('href');
+      
+      
     $('body.single-post').addClass('page-template-fullwidth-php page-template-fullwidth');
     $('body.page-id-420').addClass('page-template-fullwidth-php page-template-fullwidth');
     
@@ -32,11 +35,11 @@ jQuery(function($){
     // Bottom Footer Slide
     var winheight = $(window).height();
     $('.page-template-fullwidth .site-info').css('height', winheight/1.8);
-    $('.page-template-fullwidth .site-info #main').children('.container').css('height', winheight/2 - 60).css('overflow', 'auto').css('padding', '20px 0px');
+    $('.page-template-fullwidth .site-info #main').children('.container').css('height', winheight/2).css('overflow', 'auto').css('padding', '20px 0px');
     if($( window ).width() < $( window ).height()) {
         if($(window ).width() < 768){
             $('.page-template-fullwidth .site-info').css('height', static_footer_height+10);
-            $('.page-template-fullwidth .site-info #main').children('.container').css('height', static_footer_height+10 - 60).css('overflow', 'auto').css('padding', '20px 0px');
+            $('.page-template-fullwidth .site-info #main').children('.container').css('height', static_footer_height+10).css('overflow', 'auto').css('padding', '20px 0px');
         }
     }
     var bottom_slider_height = $('.site-info').height();
@@ -62,7 +65,8 @@ jQuery(function($){
     $('.n2-section-smartslider').css('height', winheight+'px').css('overflow', 'hidden');
     $('.n2-ss-slider-3.n2-ow').css('height', winheight+'px');
     var meet_client_page_height  = $('body.page-id-405').height();
-    $('.modal-outer').css('height', meet_client_page_height+'px');
+    $('.modal-outer').css('height', winheight+'px');
+    $('.modal-iner').css('height', winheight-150+'px').css('overflow-x', 'hidden').css('overflow-y', 'auto');
 
 
     // Team Page Slider
@@ -73,9 +77,13 @@ jQuery(function($){
     // Team Page bottom slide
     $('.page-id-405 .tab p span').html('<span class="arrow"><i class="fas fa-chevron-up"></i>&nbsp;&nbsp;&nbsp;Browse the team</span>');
     $('.page-id-405 .contents-inner .container').html(slidnav);
-    // Manage Slider Overlay hide/show
-    $('.carousel-caption-inner p span').click(function() {
-        $(this).parents('p').siblings('.modal-outer').toggle();
+    // Manage Overlay hide/show
+    $('#catapult-cookie-bar a').removeAttr('href');
+    $('#catapult-cookie-bar a').click(function() {
+        $('.cokies-policy').siblings('.modal-outer').toggle();
+    });
+    $('.clickable-overlay span').click(function() {
+        $(this).parents('.clickable-overlay').siblings('.modal-outer').toggle();
     });
     $('button.close').click(function(){
         $(this).parents('.modal-outer').toggle();
@@ -89,7 +97,8 @@ jQuery(function($){
     $('.n2-section-smartslider').css('height', winheight-50+'px').css('overflow', 'hidden');
     $('.n2-ss-slider-3.n2-ow').css('height', winheight-50+'px');
     var meet_client_page_height  = $('body.page-id-405').height();
-    $('.modal-outer').css('height', meet_client_page_height-50+'px');
+    $('.modal-outer').css('height', winheight+'px');
+    $('.modal-iner').css('height', winheight-150+'px').css('overflow-x', 'hidden').css('overflow-y', 'auto');
     $('.site-info ul.carousel-indicators .row').css('height', winheight/2-70).css('overflow', 'overlay');
     $('.page-template-fullwidth div#footer-widget .tab p').trigger('click');
   });

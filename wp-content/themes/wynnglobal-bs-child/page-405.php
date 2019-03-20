@@ -22,6 +22,7 @@ get_header(); ?>
 				<?php
 				$args = array(
 					'post_type' => 'team_member',
+					'orderby' => 'publish_date',
 					'post_status' => 'publish',
 				);
 				$arr_posts = new WP_Query( $args );
@@ -49,6 +50,7 @@ get_header(); ?>
 				<?php
 				$args = array(
 					'post_type' => 'team_member',
+					'orderby' => 'publish_date',
 					'post_status' => 'publish',
 				);
 				$arr_posts = new WP_Query( $args ); 
@@ -56,28 +58,18 @@ get_header(); ?>
 					while ( $arr_posts->have_posts() ) :
 						$arr_posts->the_post();
 						?>  
-						
-					
-    
-	<?php if ( has_post_thumbnail() ) {	?>    
-						<div class="carousel-item" style="background-image: url('<?php echo get_the_post_thumbnail_url( null, $size ); ?>')">
-    <?php } ?>
-
-
-				// 			<?php
-				// 			    if ( has_post_thumbnail() ) :
-				//                     the_post_thumbnail(); 
-				// 			    endif;
-				// 			?>
+                    	<?php if ( has_post_thumbnail() ) {	?>    
+                    	    <div class="carousel-item" style="background-image: url('<?php echo get_the_post_thumbnail_url( null, $size ); ?>')">
+                        <?php } ?>
 							<div class="carousel-caption">
 								<div class="carousel-caption-inner">
 									<h2 class="name-position"><?php the_title(); ?> <span><?php the_field('member_position'); ?></span></h2>
-									<p class="member-bio">
+									<div class="member-bio clickable-overlay">
 										<?php
 										$inputstring = get_field('member_details');
 										echo substr($inputstring, 0 ,80);
 										?>... <span> Find out more...</span>
-									</p>
+									</div>
 									<div class="modal-outer">
 										<div class="modal-iner">
 											<button type="button" class="close">&times;</button>
@@ -92,8 +84,12 @@ get_header(); ?>
 												<br />
 												<br />
 												<br />
-												<p class="member-bio">E: <a href="#"><?php echo get_field('member_email'); ?></a><br />
-												<a href="<?php echo get_field('linkdin_profile_link'); ?>" target="_blank">LinkedIn Profile</a></p>
+												<?php if(get_field('member_email')) { ?>
+												    <p class="member-bio">E: <a href="#"><?php echo get_field('member_email'); ?></a><br />
+												<?php } ?>
+												<?php if(get_field('linkdin_profile_link')) { ?>
+												    <a href="<?php echo get_field('linkdin_profile_link'); ?>" target="_blank">LinkedIn Profile</a></p>
+												<?php } ?>
 											</div>
 										</div>
 									</div>

@@ -13,6 +13,7 @@ get_header(); ?>
 				<?php
 				$args = array(
 					'post_type' => 'product_providers',
+                    'orderby' => 'publish_date',
 					'post_status' => 'publish',
 				);
 				$arr_posts = new WP_Query( $args );
@@ -30,9 +31,11 @@ get_header(); ?>
                             <div class="col-md-10">
                                 <p><?php echo the_field('product_provider_description'); ?></p>
                             </div>
-			    	        <?php
-		    	        endwhile;
-	    	        endif;
+                        </div>
+                        <hr>
+		    	        <?php
+	    	        endwhile;
+    	        endif;
     	    	?>
     			<?php
     			while ( have_posts() ) : the_post();
@@ -45,8 +48,7 @@ get_header(); ?>
     				endif;
     
     			endwhile; // End of the loop.
-    			?>                
-            </div>
+    			?> 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 

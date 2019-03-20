@@ -193,7 +193,7 @@ body {
 .full-width-page-banner {
     width: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 .breadcrumb-section a, .breadcrumb-section span {
     color: #000000;
@@ -206,6 +206,10 @@ body:not(.page-id-405):not(.elementor-editor-active) section#primary {
 }
 .page-template-fullwidth main#main {
     padding: 10px 0;
+}
+.page-template-fullwidth main#main hr {
+    border-bottom: solid 1px #000000;
+    margin: 0 13px;
 }
 .page-template-fullwidth main#main header.entry-header {
     display: none;
@@ -358,10 +362,18 @@ element.style {
     margin: 0 auto;
     text-align: left;
 }
-.carousel-caption .carousel-caption-inner h2.name-position {
+h2.name-position {
     padding-bottom: 0 !important;
     margin-bottom:0;
     color: #ffffff !important;
+    width: 85%;
+}
+div#footer-widget p.member-bio {
+    color: #ffffff;
+}
+div#footer-widget p.member-bio a {
+    color: rgb(171, 141, 63);
+    text-decoration: none; 
 }
 .carousel-caption .carousel-caption-inner h2.name-position span {
     color: rgb(171, 141, 63) !important;
@@ -388,7 +400,7 @@ element.style {
     left: 0;
     width: 100%;
     padding: 100px 150px;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.9);
     display: none;
 }
 .modal-iner {
@@ -402,7 +414,7 @@ button.close {
     opacity: 1;
     font-size: 70px;
     position: absolute;
-    right: 40px;
+    right: 0px;
     font-weight: lighter;
     top: -20px;
     z-index: 1;
@@ -449,12 +461,17 @@ div#footer-widget .footer-widget-areas section.widget {
 div#footer-widget h4 {
     color: rgb(19,43,68);
     font-size: 15px;
-    font-weight: 400;
     margin-bottom: 10px;
 }
 div#footer-widget p {
     color: #0f0f0f;
     font-size: 14px;
+}
+div#footer-widget p.clickable-overlay {
+    margin-bottom: 0;
+}
+div#footer-widget p.clickable-overlay span {
+    cursor: pointer; 
 }
 
 div#footer-widget .site-info {
@@ -482,6 +499,7 @@ div#footer-widget .bottomslider .contents .tab p {
     text-align: center;
     background-position: top;
     color: #AFAEAA;
+    text-transform: capitalize;
 }
 div#footer-widget .bottomslider .contents .contents-inner {
     background-image : url('/wp-content/uploads/2019/03/Wynn-Global-World-image.jpg');
@@ -499,7 +517,7 @@ div#footer-widget .bottomslider .contents .contents-inner .footer-bg-overlay {
     width: 100%;
     height: -webkit-fill-available;
     height: fill-available;
-    height: inherit;
+    /*height: inherit;*/
     position: relative;
 }
 div#footer-widget .design-by {
@@ -541,6 +559,13 @@ div#footer-widget .design-by a {
 .bottomslider .contents .box-4 {
     border-left: solid 2px #CBCAC6;
 }
+#catapult-cookie-bar a {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
 div#ajaxsearchlite1 {
     position: relative;
     max-width: 400px;
@@ -630,7 +655,7 @@ div#ajaxsearchlite1 {
         float: none;
     }
     .modal-outer {
-        padding: 100px 50px;
+        padding: 100px 20px;
     }
     .carousel-caption .carousel-caption-inner h2.name-position span {
         font-size: 15px !important;
