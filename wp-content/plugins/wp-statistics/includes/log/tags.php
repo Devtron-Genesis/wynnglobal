@@ -8,7 +8,6 @@
 	<?php
 	//Set Default Time Picker Option
 	list( $daysToDisplay, $rangestart, $rangeend ) = wp_statistics_prepare_range_time_picker();
-
 	if ( array_key_exists( 'tag', $_GET ) ) {
 		$tag = $_GET['tag'];
 	} else {
@@ -45,7 +44,6 @@
 	$html .= ' <input type="submit" value="' . __( 'Select', 'wp-statistics' ) . '" class="button-primary">';
 	$html .= '<br>';
 
-	// Get TimeStamp
 	list( $daysToDisplay, $rangestart_utime, $rangeend_utime ) = wp_statistics_date_range_calculator(
 		$daysToDisplay,
 		$rangestart,
@@ -108,7 +106,7 @@
                         <canvas id="hit-stats" height="80"></canvas>
                         <script>
                             var ctx = document.getElementById("hit-stats").getContext('2d');
-							<?php if(is_rtl()) { ?> Chart.defaults.global.defaultFontFamily = "tahoma"; <?php } ?>
+                            <?php if(is_rtl()) { ?> Chart.defaults.global.defaultFontFamily = "tahoma"; <?php } ?>
                             var ChartJs = new Chart(ctx, {
                                 type: 'line',
                                 data: {

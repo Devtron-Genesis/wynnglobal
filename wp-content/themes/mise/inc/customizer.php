@@ -225,6 +225,21 @@ function mise_custom_settings_register( $wp_customize ) {
         'type'       => 'checkbox',
 		'priority' => 3,
     ) );
+	/* Copyright Text */
+	$wp_customize->add_setting('mise_theme_options[_copyright_text]', array(
+		'sanitize_callback' => 'mise_sanitize_text',
+		'default'    => '&copy; '.date('Y').' '. get_bloginfo('name'),
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+		'transport' => 'postMessage'
+	) );
+	$wp_customize->add_control('mise_theme_options[_copyright_text]', array(
+		'label'      => __( 'Copyright Text', 'mise' ),
+		'section'    => 'cresta_mise_theme_options_general',
+		'settings'   => 'mise_theme_options[_copyright_text]',
+		'type'       => 'text',
+		'priority' => 3,
+	) );
 	/* Custom Excerpt More */
 	$wp_customize->add_setting('mise_theme_options[_excerpt_more]', array(
 	'sanitize_callback' => 'sanitize_text_field',
@@ -239,22 +254,6 @@ function mise_custom_settings_register( $wp_customize ) {
         'type'       => 'text',
 		'priority' => 4,
     ) );
-	/* Copyright Text */
-	$wp_customize->add_setting('mise_theme_options[_copyright_text]', array(
-		'sanitize_callback' => 'mise_sanitize_text',
-		'default'    => '&copy; '.date('Y').' '. get_bloginfo('name'),
-		'type'       => 'option',
-		'capability' => 'edit_theme_options',
-		'transport' => 'postMessage'
-	) );
-	$wp_customize->add_control('mise_theme_options[_copyright_text]', array(
-		'label'      => __( 'Copyright Text', 'mise' ),
-		'description' => __( 'Get the PRO version to remove CrestaProject Credits', 'mise' ),
-		'section'    => 'cresta_mise_theme_options_general',
-		'settings'   => 'mise_theme_options[_copyright_text]',
-		'type'       => 'text',
-		'priority' => 4,
-	) );
 	/**
 	* ################ SECTION POSTS AND PAGES SETTINGS
 	*/

@@ -84,16 +84,7 @@ if ( has_post_thumbnail() ) {
 			<div class="row row-layout-choice-home">
 				<section id="main-container" class="<?php echo esc_attr( mynote_main_container_css() ); ?>">
 					<?php
-						if ( get_query_var( 'paged' ) ) {
-							$paged = get_query_var( 'paged' );
-						} elseif ( get_query_var( 'page' ) ) {
-							$paged = get_query_var( 'page' );
-						} else {
-							$paged = 1;
-						}
-						$posts_per_page = get_option( 'posts_per_page' );
-					
-						$args = array( 'post_type' => 'post', 'posts_per_page' => $posts_per_page, 'paged' => $paged );
+						$args = array( 'post_type' => 'post', 'posts_per_page' => 10 );
 						$wp_query = new WP_Query( $args );
 					?>
 					<?php get_template_part( 'loop' ); ?>

@@ -98,9 +98,9 @@
     "objectcache.lifetime": 180,
     "objectcache.purge.all": false,
     "pgcache.configuration_overloaded": false,
-    "pgcache.enabled": "1",
+    "pgcache.enabled": "0",
     "pgcache.comment_cookie_ttl": 1800,
-    "pgcache.debug": "0",
+    "pgcache.debug": false,
     "pgcache.engine": "file_generic",
     "pgcache.file.gc": 3600,
     "pgcache.file.nfs": false,
@@ -219,7 +219,7 @@
     },
     "stats.enabled": "0",
     "minify.configuration_overloaded": false,
-    "minify.enabled": "1",
+    "minify.enabled": "0",
     "minify.auto": "1",
     "minify.debug": "0",
     "minify.engine": "file",
@@ -319,8 +319,8 @@
     ],
     "minify.cache.files_regexp": false,
     "cdn.configuration_overloaded": false,
-    "cdn.enabled": "0",
-    "cdn.debug": false,
+    "cdn.enabled": "1",
+    "cdn.debug": "0",
     "cdn.flush_manually": false,
     "cdn.engine": "stackpath2",
     "cdn.uploads.enable": true,
@@ -824,7 +824,7 @@
     "widget.pagespeed.enabled": "1",
     "widget.pagespeed.key": "",
     "widget.pagespeed.key.restrict.referrer": "",
-    "widget.pagespeed.show_in_admin_bar": "1",
+    "widget.pagespeed.show_in_admin_bar": "0",
     "timelimit.email_send": 180,
     "timelimit.varnish_purge": 300,
     "timelimit.cache_flush": 600,
@@ -837,7 +837,7 @@
     "timelimit.cdn_container_create": 300,
     "timelimit.domain_rename": 120,
     "timelimit.minify_recommendations": 600,
-    "common.instance_id": 996228606,
+    "common.instance_id": 1225337453,
     "common.force_master": true,
     "extensions.active": {
         "newrelic": "w3-total-cache\/Extension_NewRelic_Plugin.php",
@@ -847,6 +847,6 @@
     "plugin.license_key": "",
     "plugin.type": "",
     "fragmentcache": {
-        "engine": "file"
+        "engine": ""
     }
 }

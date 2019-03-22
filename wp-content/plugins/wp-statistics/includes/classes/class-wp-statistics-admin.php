@@ -88,9 +88,6 @@ class WP_Statistics_Admin {
 
 		//Add Visitors Log Table
 		add_action( 'admin_init', array( $this, 'register_visitors_log_tbl' ) );
-
-		//Check Require update page type in database
-		WP_Statistics_Install::_init_page_type_updater();
 	}
 
 	/**

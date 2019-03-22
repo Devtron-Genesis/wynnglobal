@@ -2151,10 +2151,6 @@ body.toplevel_page_maxmegamenu {
 					border: 1px solid #aaa;
 				}
 
-				div.CodeMirror span.CodeMirror-matchingbracket {
-					color: green;
-				}
-
 				.CodeMirror-scroll {
 					min-height: 150px;
 				}
@@ -2194,7 +2190,7 @@ body.toplevel_page_maxmegamenu {
 							display: block;
 							float: left;
 							font-size: 0.9em;
-							color: #777;
+							color: #aaa;
 							line-height: 20px;
 							width: 100%;
 
@@ -2419,7 +2415,7 @@ body.toplevel_page_maxmegamenu {
 				label span.mega-short-desc {
 					font-size: 0.8em;
 					text-transform: uppercase;
-					color: #777;
+					color: #aaa;
 					display: block;
 					margin: 0 0 2px 1px;
 				}

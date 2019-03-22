@@ -76,7 +76,7 @@ get_header(); ?>
 											<div class="row">
 												<div class="col-md-8">
 													<h2 class="name-position"><?php the_title(); ?> <span><?php the_field('member_position'); ?></span></h2>
-													<h2 class="name-position"><span>Details of my role</span></h2>
+													<h2 class="name-position"><span>Details of my role</span></h2><br />
 													<p class="member-bio"><?php echo get_field('member_details'); ?>
 												</p>
 											</div>

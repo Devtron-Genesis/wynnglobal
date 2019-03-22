@@ -5,9 +5,7 @@
 
 get_header(); ?>
 	<?php if ( has_post_thumbnail() ) {	?>
-		<div class="full-width-page-banner">
-            <img src="<?php echo get_the_post_thumbnail_url( null, $size ); ?>">      
-        </div>        
+		<div class="full-width-page-banner" style="background-image: url('<?php echo get_the_post_thumbnail_url( null, $size ); ?>')"></div>        
     <?php } ?>
 	<section id="primary" class="content-area col-sm-12">
 		<main id="main" class="site-main" role="main">

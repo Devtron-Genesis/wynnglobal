@@ -461,10 +461,6 @@
 
                         setTimeout(function(){
                             $(document).trigger("widget-added", [widget]);
-
-                            if ('acf' in window) {
-                                acf.getFields(document);
-                            }
                         }, 100);
 
                     });
@@ -1055,13 +1051,7 @@
 
                         setTimeout(function(){
                             $(document).trigger("widget-added", [widget]);
-
-                            if ('acf' in window) {
-                                acf.getFields(document);
-                            }
-
                         }, 100);
-
 
                     });
 

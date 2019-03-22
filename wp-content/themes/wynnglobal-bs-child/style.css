@@ -62,7 +62,7 @@ button.navbar-toggler {
 div#mega-menu-wrap-primary {
     position: fixed;
     right: 0;
-    top: 40;
+    top: 0;
     background: none;
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
@@ -179,7 +179,7 @@ li#wp-megamenu-item-wpmm-search-icon {
 
 /*Content Styling*/
 /*body {*/
-/*    background-image: url("/wp-content/uploads/2019/01/Background_10.jpg");*/
+/*    background-image: url("/wordpress/wp-content/uploads/2019/01/Background_10.jpg");*/
 /*}*/
 /*body:not(.home) {*/
 /*    padding-top: 120px;*/
@@ -330,7 +330,7 @@ ul {
 /*Meet The Team Styling*/
 
 element.style {
-    background-image: url(/wp-content/uploads/2019/01/H-Barry.jpg);
+    background-image: url(/wordpress/wp-content/uploads/2019/01/H-Barry.jpg);
 }
 .carousel-indicators-main {
     display: none;
@@ -462,6 +462,7 @@ div#footer-widget h4 {
     color: rgb(19,43,68);
     font-size: 15px;
     margin-bottom: 10px;
+    font-weight: 800;
 }
 div#footer-widget p {
     color: #0f0f0f;
@@ -494,7 +495,7 @@ div#footer-widget .bottomslider .contents .tab p {
     width: 630px;
     height: 50px;
     margin: 0 auto;
-    background-image: url("/wp-content/uploads/2019/03/tab-min.png");
+    background-image: url("/wordpress/wp-content/uploads/2019/03/tab-min.png");
     background-size: cover;
     text-align: center;
     background-position: top;
@@ -502,7 +503,7 @@ div#footer-widget .bottomslider .contents .tab p {
     text-transform: capitalize;
 }
 div#footer-widget .bottomslider .contents .contents-inner {
-    background-image : url('/wp-content/uploads/2019/03/Wynn-Global-World-image.jpg');
+    background-image : url('/wordpress/wp-content/uploads/2019/03/Wynn-Global-World-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     float: left;
@@ -517,8 +518,10 @@ div#footer-widget .bottomslider .contents .contents-inner .footer-bg-overlay {
     width: 100%;
     height: -webkit-fill-available;
     height: fill-available;
-    /*height: inherit;*/
     position: relative;
+}
+.page-id-405 div#footer-widget .bottomslider .contents .contents-inner .footer-bg-overlay {
+     height: inherit;
 }
 div#footer-widget .design-by {
     width: 100%;
@@ -620,8 +623,11 @@ div#ajaxsearchlite1 {
     ul.mega-sub-menu {
         background: rgba(19,43,68,.96) !important;
     }
-    header#masthead {
-        position: relative;
+    /*header#masthead {*/
+    /*    position: relative;*/
+    /*}*/
+    .modal-outer {
+        padding: 100px 50px;
     }
     div#mega-menu-wrap-primary {
         position: absolute;
@@ -653,9 +659,6 @@ div#ajaxsearchlite1 {
     }
     .bottomslider .contents .box-1 img {
         float: none;
-    }
-    .modal-outer {
-        padding: 100px 20px;
     }
     .carousel-caption .carousel-caption-inner h2.name-position span {
         font-size: 15px !important;

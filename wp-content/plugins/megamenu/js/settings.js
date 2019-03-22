@@ -31,7 +31,15 @@ jQuery(function ($) {
     });
 
     if ($('#codemirror').length) {
-        wp.codeEditor.initialize($('#codemirror'), cm_settings);
+        var codeMirror = CodeMirror.fromTextArea(document.getElementById('codemirror'), {
+            tabMode: 'indent',
+            lineNumbers: true,
+            lineWrapping: true,
+            viewportMargin: Infinity,
+            onChange: function(cm) {
+                cm.save();
+            }
+        });
     }
 
     $('[data-tab="mega-tab-content-custom_styling"]').on('click', function() {

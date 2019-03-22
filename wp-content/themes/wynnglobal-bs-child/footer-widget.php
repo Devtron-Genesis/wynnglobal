@@ -15,7 +15,7 @@ if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_ac
                         <div class="col-12 col-md-4 footer-widget-areas"><?php dynamic_sidebar( 'footer-3' ); ?></div>
                     <?php endif; ?>
                     <!--<div class="col-12 col-md-1"></div>-->
-                <p class="design-by">Design and developed by <a href="http://dev.devtrongenesis.com/"><b>Devtron Genesis</b></a></p>
+                <p class="design-by">Designed and developed by <a href="http://dev.devtrongenesis.com/"><b>Devtron Genesis</b></a></p>
                 </div>
             </div>
 
@@ -32,8 +32,8 @@ if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_ac
                                     <div class="row">
                                         <div class="box box-1 col-12 col-md-3">
                                             <h3>How can we help?</h3>
-                                                <a target="_blank" href="http://wynnglobal.com"><img src="/wp-content/uploads/2019/03/Wynn-Global-Inc-Rectangle-Logo-Blue.png" width="75%"></a><br><br><br>
-                                                <a target="_blank"  href="http://www.supervalores.gob.pa/"><img src="/wp-content/uploads/2019/03/SMV-Logo.png" width="75%"></a>
+                                                <a target="_blank" href="http://wynnglobal.com/wordpress"><img src="/wordpress/wp-content/uploads/2019/03/Wynn-Global-Inc-Rectangle-Logo-Blue.png" width="75%"></a><br><br><br>
+                                                <a target="_blank"  href="http://www.supervalores.gob.pa/"><img src="/wordpress/wp-content/uploads/2019/03/SMV-Logo.png" width="75%"></a>
                                         </div>
                                         <div class="box box-2 col-12 col-md-3">
                                             <h3>Individuals</h3>
@@ -49,7 +49,7 @@ if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_ac
                                         </div> 
                                     </div>
                                 </div>
-                                <p class="design-by">Design and developed by <a href="http://dev.devtrongenesis.com/"><b>Devtron Genesis</b></a></p>
+                                <p class="design-by">Designed and developed by <a href="http://dev.devtrongenesis.com/"><b>Devtron Genesis</b></a></p>
                             </div>
                         </div>
                         <div class="container" style="position: relative;">

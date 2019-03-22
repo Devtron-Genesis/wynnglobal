@@ -46,12 +46,14 @@ if ( ! function_exists( 'mise_entry_footer' ) ) :
 function mise_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		$categories_list = get_the_category_list( ', ' );
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ' / ', 'mise' ) );
 		if ( $categories_list && mise_categorized_blog() ) {
 			printf( '<span class="cat-links"><i class="fa fa-folder-open spaceRight" aria-hidden="true"></i>' . $categories_list . '</span>'); // WPCS: XSS OK.
 		}
 
-		$tags_list = get_the_tag_list( '', ' ' );
+		/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'mise' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links"><i class="fa fa-tags spaceRight" aria-hidden="true"></i>' . $tags_list . '</span>'); // WPCS: XSS OK.
 		}
