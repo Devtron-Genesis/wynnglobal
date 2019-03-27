@@ -1,0 +1,33 @@
+name = Wynnn Global
+description = Theme for Wynnn Global
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = assets/css/boilerplate.css
+stylesheets[all][] = assets/css/typography.css
+stylesheets[all][] = assets/css/common.css
+stylesheets[all][] = assets/css/layout.css
+stylesheets[all][] = assets/css/navigations.css
+stylesheets[all][] = assets/css/sections.css
+stylesheets[all][] = assets/css/forms.css
+
+stylesheets[only screen and (max-width: 1279px)][] = assets/css/laptopscreen.css
+stylesheets[only screen and (max-width: 1023px)][] = assets/css/smallscreen.css
+stylesheets[handheld, only screen and (max-width: 767px)][] = assets/css/handheld.css
+stylesheets[print][] = assets/css/print.css
+
+scripts[] = assets/js/jquery-1.7.min.js
+scripts[] = assets/js/libs/jquery.easing.1.3.js
+scripts[] = assets/js/libs/jquery.mousewheel.js
+scripts[] = assets/js/libs/superfish.js
+scripts[] = assets/js/plugins.js
+scripts[] = assets/js/script.js
+
+regions[header] = Header
+regions[nav] = Navigation
+regions[content_top] = Content Top
+regions[content] = Content
+regions[content_right] = Content Right
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom

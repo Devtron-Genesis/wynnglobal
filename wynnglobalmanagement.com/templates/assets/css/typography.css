@@ -1,0 +1,78 @@
+/*  ========================================================================
+    Typography CSS
+    ========================================================================    */
+    
+    body {
+        font: normal 16px/1.6em Georgia, Palatino, Palatino Linotype, Times, Times New Roman;
+        -webkit-text-size-adjust: none;
+        color: #1e1c18;
+    }
+    
+        img, object, embed {
+            margin-bottom: 24px;
+        }
+        
+        a, a:active, a:visited {
+            text-decoration: none;
+            color: #1e1c18;
+            outline: none;
+            padding: 0;
+            border-bottom: 1px dotted #807d7b;
+        }
+        
+        a:hover, a:focus {
+            color: #1e1c18;
+            text-decoration: none;
+            padding: 0 0 1px;
+            border-bottom: none;
+        }
+        
+        p, ul, ol, blockquote {
+            margin-bottom: 24px;
+        }
+        
+        blockquote {
+            border-left: 1px solid #c1c1c1;
+            color: #747474;
+            padding-left: 15px;
+            margin-left: -15px;
+        }
+        
+        h1 {
+            font-size: 2em;
+            padding: 10px 10px 30px;
+            margin: 0 0 15px;
+            font-weight: normal;
+            color: #990000;
+            letter-spacing: -0.03em;
+            line-height: 1em;
+            border-bottom: 1px solid #ece9e3;
+        }
+        
+        h2 {
+            font: bold 1.125em sans-serif;
+            margin-bottom: 20px;
+            color: #000;
+            letter-spacing: -0.03em;
+        }
+        
+        h3 {
+            font-size: 1.3em;
+            margin-bottom: 18px;
+            font-weight: bold;
+            color: #aca07e;
+        }
+        
+        h4 {
+            font-size: 1.1em;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #aca07e;
+        }
+        
+        h5 {
+            font-size: 1em;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #aca07e;
+        }

@@ -1,0 +1,87 @@
+/*  ========================================================================
+    Typography CSS
+    ========================================================================    */
+    
+    /* @fontface
+    ------------------------------------------------------------------------    */
+
+        @font-face {
+            font-family: 'MyriadPro';
+            src: url('../fonts/myriad-pro/myriadpro.eot?#iefix') format('embedded-opentype'), 
+                 url('../fonts/myriad-pro/myriadpro.woff') format('woff'), 
+                 url('../fonts/myriad-pro/myriadpro.ttf')  format('truetype'),
+                 url('../fonts/myriad-pro/myriadpro.svg#MyriadPro') format('svg');
+            }
+    
+    /* Fonts
+    ------------------------------------------------------------------------    */
+    
+    body {
+        font: normal 87.5%/1.6em 'MyriadPro', sans-serif;
+        -webkit-text-size-adjust: none;
+        color: #fff;
+    }
+    
+        img, object, embed {
+            margin-bottom: 20px;
+        }
+        
+        a, a:active, a:visited {
+            text-decoration: none;
+            color: #fff;
+            outline: none;
+            padding: 0;
+            border-bottom: 1px dotted #807d7b;
+        }
+        
+        a:hover, a:focus {
+            color: #ccc;
+            text-decoration: none;
+            padding: 0 0 1px;
+            border-bottom: none;
+        }
+        
+        p, ul, ol, blockquote {
+            margin-bottom: 20px;
+        }
+        
+        blockquote {
+            border-left: 1px solid #c1c1c1;
+            color: #747474;
+            padding-left: 15px;
+            margin-left: -15px;
+        }
+        
+        h1 {
+            font: normal 1.25em 'MyriadPro', sans-serif;
+            margin: 0 0 15px;
+            color: #ffffff;
+            letter-spacing: -0.03em;
+            line-height: 1em;
+            font-weight: bold;
+        }
+        
+        h2 {
+            font: bold 1.1em 'MyriadPro', sans-serif;
+            margin-bottom: 20px;
+            color: #000;
+            letter-spacing: -0.03em;
+        }
+        
+        h3 {
+            font-size: 1em;
+            margin-bottom: 18px;
+            font-weight: bold;
+        }
+        
+        h4 {
+            font-size: 0.9em;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        
+        h5 {
+            font-size: 0.8em;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }

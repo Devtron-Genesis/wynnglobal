@@ -1,0 +1,56 @@
+/*  ========================================================================
+    Forms CSS
+    ========================================================================    */
+
+    /* General Form
+    ------------------------------------------------------------------------    */
+    
+        .form {
+            
+        }
+        
+            .form legend {
+                
+            }
+            
+            .form ol {
+                list-style: none;
+                margin: 0;
+            }
+            
+                .form .text-field {
+                    border: 1px solid #b6b6b6;
+                    margin: 0;
+                    padding: 5px;
+                }
+    
+    /* Site Search
+    ------------------------------------------------------------------------    */
+    
+        #site-search {
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            background: #cbcbcb;
+            padding: 2px;
+        }
+        
+            #site-search .text-field {
+                padding: 5px 33px 5px 5px;
+                width: 215px;
+            }
+            
+            #site-search .text-field:hover, #site-search .text-field:focus {
+                border: 1px solid #990000;
+            }
+        
+            #site-search .form-button {
+                position: absolute;
+                right: 6px;
+                top: 2px;
+                height: 28px;
+                width: 28px;
+                text-indent: -9999px;
+                border: none;
+                background: transparent url("../images/site-search-button.png") left top no-repeat;
+            }

@@ -1,0 +1,303 @@
+/*  ========================================================================
+    Navigations CSS
+    ========================================================================    */
+
+    /* General Navigation 
+    ------------------------------------------------------------------------    */
+    
+        .nav {
+            position: relative;
+            font: normal 0.9em 'MyriadPro', sans-serif;
+            list-style: none;
+            margin: 0;
+            line-height: 1em;
+        }
+        
+            .nav li {
+                float: left;
+            }
+            
+                .nav li a {
+                    display: block;
+                    padding: 5px;
+                    margin-right: 5px;
+                    color: #1f1c18;
+                    border: none;
+                }
+                
+                .nav li a:hover, .nav li a:focus {
+                    color: #000;
+                }
+                
+                .nav li a.active, .nav li a.active:hover, .nav li a.active:focus {
+                    color: #990000;
+                }
+    
+    /* Skip Navigation
+    ------------------------------------------------------------------------    */
+    
+        #skip-navigation ul {
+            float: right;
+		} 
+		
+            #skip-navigation ul li {
+                position: absolute;
+                display: none; 
+            }
+		
+            /*All incl Opera*/
+            /* * html */ 
+            
+            #skip-navigation ul li {display: block} /*Seen by IE*/
+            
+            :root #skip-navigation ul li {display: block} /*Seen by Moz, FF and Safari*/
+		
+                #skip-navigation ul li a {
+                    position: absolute;
+                    left: -9999em;
+                    display: inline;
+                    text-transform: uppercase;
+                    border: none;
+                    font-size: 1.7em;
+                    padding: 15px;
+                    text-align: center;
+                    background: #8cc63f;
+                    color: #fff;
+                    margin: 0;
+                    z-index: 1000;
+                    width: 270px;
+                }
+                
+                #skip-navigation ul li a:focus, #skip-navigation ul li a:active {
+                    left: auto;
+                    right: 60px;
+                    top: 63px;	
+                }
+                
+                #skip-navigation ul li a:hover {cursor: default}
+    
+    /* Back to Home
+    ------------------------------------------------------------------------    */
+    
+        #home-navigation {
+            position: absolute;
+            left: 0;
+            top: 16px;
+        }
+        
+            #home-navigation li a {
+                width: 280px;
+                height: 91px;
+                background: transparent url("../images/logo.png") 0 0 no-repeat;
+                text-indent: -9999px;
+                padding: 0;
+                background-size: contain;
+            }
+    
+    /* Main Navigation
+    ------------------------------------------------------------------------    */
+    
+        #main-navigation {
+            width: 230px;
+            z-index: 10;
+            margin: 0 0 0 6px;
+        }
+        
+            #main-navigation li {
+                float: left;
+                width: 100%;
+            }
+            
+                #main-navigation li a {
+                    display: block;
+                    color: #fff;
+                    padding: 14px;
+                    margin: 0;
+                    margin: 0 0 2px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                    background: #005f2c;
+                    background: -moz-linear-gradient(top, #005f2c 0%, #00512c 100%);
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#005f2c), color-stop(100%,#00512c));
+                    background: -webkit-linear-gradient(top, #005f2c 0%,#00512c 100%);
+                    background: -o-linear-gradient(top, #005f2c 0%,#00512c 100%);
+                    background: -ms-linear-gradient(top, #005f2c 0%,#00512c 100%);
+                    background: linear-gradient(top, #005f2c 0%,#00512c 100%);
+                }
+                
+                #main-navigation li a {
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#005f2c, endColorstr=#00512c,GradientType=0 );
+                }
+                
+                #main-navigation li ul li a {
+                    filter: progid:DXImageTransform.Microsoft.gradient( enabled=false );
+                }
+                
+                .ie #main-navigation li ul li a:hover, .ie #main-navigation li ul li a:focus,
+                .ie9 #main-navigation li ul li a:hover, .ie9 #main-navigation li ul li a:focus {
+                    text-decoration: underline;
+                    background: #005f2c;
+                }
+                
+                #main-navigation li.sfHover a, #main-navigation li a:hover, #main-navigation li a:focus {
+                    background: #00512c;
+                    text-shadow: 0px 0px 10px #fff;
+                }
+                
+            #main-navigation .main-navigation-sub {
+                position: absolute;
+                color: #fff;
+                margin: 0 0 0 32px;
+                padding: 10px;
+                list-style: none;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                z-index: 11;
+                background: #005f2c;
+                background: -moz-linear-gradient(top, #005f2c 0%, #00512c 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#005f2c), color-stop(100%,#00512c));
+                background: -webkit-linear-gradient(top, #005f2c 0%,#00512c 100%);
+                background: -o-linear-gradient(top, #005f2c 0%,#00512c 100%);
+                background: -ms-linear-gradient(top, #005f2c 0%,#00512c 100%);
+                background: linear-gradient(top, #005f2c 0%,#00512c 100%);
+            }
+            
+            /*.ie #main-navigation .main-navigation-sub {
+                -pie-background: linear-gradient(#005f2c, #00512c);
+                behavior: url("/sites/all/themes/wynnglobal/assets/js/libs/PIE.htc");
+            }
+            
+            .ie9 #main-navigation .main-navigation-sub {
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005f2c', endColorstr='#00512c',GradientType=0 );
+            }*/
+            
+                #main-navigation .main-navigation-sub li {
+                    margin: 5px 0 0 0;
+                    background: none;
+                }
+                
+                    #main-navigation .main-navigation-sub li a {
+                        background: none;
+                        color: #fff;
+                        padding: 5px;
+                        text-shadow: none;
+                    }
+                    
+                    #main-navigation .main-navigation-sub li a:hover, #main-navigation .main-navigation-sub li a:focus {
+                        background: #005f2c;
+                    }
+                    
+                        #main-navigation .main-navigation-sub li a.active, #main-navigation li a.active:hover, #main-navigation li a.active:focus {
+                            background: #fff;
+                            border: 1px solid #cbcbcb;
+                            border-bottom: none;
+                            font-weight: bold;
+                            color: #990000;
+                            margin: 0;
+                        }                    
+    
+    /* Top Navigation
+    ------------------------------------------------------------------------    */
+    
+        #top-navigation {
+            position: absolute;
+            right: 0;
+            top: 15px;
+        }
+        
+            #top-navigation li {
+                padding: 0 10px;
+                margin: 0;
+            }
+            
+            #top-navigation li.language {
+                border-right: 1px solid #fff;
+            }
+            
+            #top-navigation li#login {
+                background: transparent url("../images/login-bullet.png") 90% 50% no-repeat;
+            }
+            
+                #top-navigation li a {
+                    color: #ffffff;
+                    padding: 3px;
+                    margin: 0;
+                }
+                
+                #top-navigation li a:hover, #top-navigation li a:focus {
+                    text-decoration: underline;
+                }
+            
+            #top-navigation .clockdate, #top-navigation .clocktime {
+                display: block;
+                padding: 3px;
+                text-align: center;
+                color: #ffffff;
+            }
+    
+    /* Superfish
+    ------------------------------------------------------------------------    */
+    
+        /*** ESSENTIAL STYLES ***/
+        .sf-menu, .sf-menu * {
+            margin:			0;
+            padding:		0;
+            /*list-style:		none;*/
+        }
+        .sf-menu {
+            line-height:	1.0;
+        }
+        .sf-menu ul {
+            position:		absolute;
+            top:			-999em;
+            width:			200px; /* left offset of submenus need to match (see below) */
+        }
+        .sf-menu ul li {
+            width:			100%;
+        }
+        .sf-menu li:hover {
+            visibility:		inherit; /* fixes IE7 'sticky bug' */
+        }
+        .sf-menu li {
+            float:			left;
+            position:		relative;
+        }
+        .sf-menu a {
+            display:		block;
+            position:		relative;
+        }
+        .sf-menu li:hover ul,
+        .sf-menu li.sfHover ul {
+            left:			0;
+            top:			40px; /* match top ul list item height */
+            z-index:		99;
+        }
+        ul.sf-menu li:hover li ul,
+        ul.sf-menu li.sfHover li ul {
+            top:			-999em;
+        }
+        ul.sf-menu li li:hover ul,
+        ul.sf-menu li li.sfHover ul {
+            left:			200px; /* match ul width */
+            top:			0;
+        }
+        ul.sf-menu li li:hover li ul,
+        ul.sf-menu li li.sfHover li ul {
+            top:			-999em;
+        }
+        ul.sf-menu li li li:hover ul,
+        ul.sf-menu li li li.sfHover ul {
+            left:			200px; /* match ul width */
+            top:			0;
+        }
+        
+        /*** adding sf-vertical in addition to sf-menu creates a vertical menu ***/
+
+        /* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
+        .sf-vertical li:hover ul,
+        .sf-vertical li.sfHover ul {
+            left:	200px; /* match ul width */
+            top:	0;
+        }

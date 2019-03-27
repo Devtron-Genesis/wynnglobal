@@ -1,0 +1,6 @@
+; $Id$
+name = Wynn Global Site
+description = Site blocks and functions
+package = Wynn Global
+core = 7.x
+files[] = wynnglobal_site.module

@@ -1,0 +1,318 @@
+<?php
+// $Id$
+
+/**
+ * Implements hook_help().
+ */
+function wynnglobal_site_help($path, $arg) {
+    switch ($path) {
+        // Main module help for the block module
+        case 'admin/help#wynnglobal_site':
+            return  '<p>Roobarb</p>';
+    }
+}
+
+
+/*
+* hook_menu()
+**/
+function wynnglobal_site_menu() {
+
+    $items = array();
+    
+    $items['background/images'] = array(
+      'title' => 'Background Images',
+      'description' => 'Background Images',
+      'page callback' => 'page_content_background_images',
+      'access arguments' => array('access content'),
+      'type' => MENU_NORMAL_ITEM,
+    );
+    
+    $items['footer/images'] = array(
+      'title' => 'Footer Images',
+      'description' => 'Footer Images',
+      'page callback' => 'page_content_footer_images',
+      'access arguments' => array('access content'),
+      'type' => MENU_NORMAL_ITEM,
+    );
+    
+    $items['panel/content/%'] = array(
+      'title' => 'Node Content',
+      'description' => 'Node Content',
+      'page callback' => 'page_content_node',
+      'page arguments' => array(2),
+      'access arguments' => array('access content'),
+      'type' => MENU_NORMAL_ITEM,
+    );
+    
+    $items['login/check/%/%'] = array(
+      'title' => 'Pass Content',
+      'description' => 'Pass Content',
+      'page callback' => 'page_content_pass',
+      'page arguments' => array(2,3),
+      'access arguments' => array('access content'),
+      'type' => MENU_NORMAL_ITEM,
+    );
+    
+    /*
+    * Admin Pages
+    **/
+    $items['admin/config/content/contact'] = array(
+      'title' => 'Contact Details',
+      'description' => 'Contact details for site',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('site_contact_admin'),
+      'access arguments' => array('access administration pages'),
+      'type' => MENU_NORMAL_ITEM,
+    );
+    
+    return $items;
+}
+
+/*
+* Blocks
+**/
+function wynnglobal_site_block_info() {
+
+    $blocks['site_login_menu'] = array(
+        'info' => t('Login Menu'),
+        'cache' => DRUPAL_NO_CACHE,
+    );
+       
+    return $blocks;
+}
+
+function wynnglobal_site_block_view($delta=0) {
+
+    $block = array();
+
+    switch ($delta) {
+        case 'site_login_menu':
+            $block['content'] = block_content_login_menu();
+            break;
+    }
+
+    return $block;
+}
+
+function wynnglobal_site_theme() {
+
+    return array(
+        'login-menu' => array(
+            'arguments' => array('title' => NULL, 'user' => NULL),
+            'template' => 'themes/login-menu'
+        )
+    );
+}
+
+/*
+* Content Functions
+**/
+function page_content_node($nid,$nojs=0){
+    
+    if ($nid>0){
+        
+        global $language;
+        $array = array();
+        
+        $node = node_load($nid);
+        $translations = translation_node_get_translations($node->tnid);
+        
+        if ($node->type == 'webform'){
+            
+            //print '<pre>';
+            //print $language->language.'<br />';
+            //print_r($translations);
+            //exit;
+            $contact = variable_get('contact', array());
+            
+            foreach ($translations as $tr) {
+                if ($tr->language == $language->language){
+                    $node = node_load($tr->nid);
+                    $submission =  (object) array();
+                    $form = drupal_get_form('webform_client_form_'.$node->nid, $node, $submission);
+                    //$form['#action'] = drupal_lookup_path('alias', 'node/'.$node->nid, $language->language);
+                    //if ($language->language != 'en') $form['#action'] = '/'.$language->language.'/'.$form['#action'];
+                    $form['#action'] = 'node/'.$node->nid;
+                    $webform_node = drupal_render($form);
+                    
+                    $form_text = html_entity_decode(t('<p>'. nl2br($contact['address']) .'</p><p>Please fill in the form below, making sure to complete the fields marked with a <span class="form-required">*</span></p>'));
+                    $array['title'] = $node->title;
+                    $array['text'] = $form_text . $webform_node;
+                }
+            }
+            if ($nojs>0) return $array;
+            return drupal_json_output($array);
+        }
+        else {
+            
+            //print '<pre>';
+            //print $language->language.'<br />';
+            //print_r($translations);
+            //exit;
+            
+            foreach ($translations as $tr) {
+                if ($tr->language == $language->language){
+                    $node = node_load($tr->nid);
+                    $array['title'] = $node->title;
+                    $array['text'] = $node->body[$language->language][0]['safe_value'];                
+                }
+            }
+            
+            if ($nojs>0) return $array;
+            return drupal_json_output($array);
+        }
+        
+        if ($nojs>0) return $array;
+        return drupal_json_output($array);
+    }
+}
+
+function page_content_pass($username,$passwd){
+    
+    $array = array();
+    
+    if ($username=='wynnglobal' && $passwd=='dm9qjGl36'){
+        
+        $array = array(
+            'url' => 'https://wynn-global.basecamphq.com/login',
+        );
+    }
+    else {
+        $array = array(
+            'url' => '',
+        );
+    }
+    
+    return drupal_json_output($array);
+}
+
+function page_content_background_images(){
+//print 'PAGE_CONTENT_BACKGROUND_IMAGES<pre>';
+//print_r($node);
+//exit;
+    $array = array();
+    $node = node_load(35);
+    
+    foreach ($node->field_back_img['en'] as $img){
+        $array[] = array(
+            'url' => file_create_url($img['uri'])
+        );
+    }
+    shuffle($array);
+//print '<pre>';
+//print_r($array);
+//exit;
+    return drupal_json_output($array); 
+}
+
+function page_content_footer_images(){
+//print 'PAGE_CONTENT_FOOTER_IMAGES<pre>';
+//print_r($node);
+//exit;
+    $array = array();
+    $node = node_load(1);
+    
+    foreach ($node->field_image['en'] as $img){
+        $array[] = array(
+            'url' => file_create_url($img['uri'])
+        );
+    }
+    shuffle($array);
+//print '<pre>';
+//print_r($array);
+//exit;
+    return drupal_json_output($array);
+}
+
+function block_content_login_menu(){
+    global $user;
+    return theme('login-menu', array('title' => 'Login Menu', 'user' => $user));
+}
+
+function __build_menu($menu_array, $isSub = 0){ // TODO - multi level highlight
+
+    $page_content = (!empty($isSub)) ? '<ul class="main-navigation-sub">' : '<ul id="main-navigation" class="nav sf-menu sf-vertical">';
+    global $language;
+    //print '<pre>';
+    //print_r($menu_array);
+    //exit;
+    
+    foreach ($menu_array as $key => $item) {
+        
+        if ($item['link']['language'] == $language->language){
+            
+            preg_match('/(\d+)$/',$item['link']['link_path'],$m);
+            $datasrc = (!empty($m[1])) ? $m[1] : 0;
+            $page_content .= '<li><a href="javascript: void(0);" class="text-content-src" data-src="'. $datasrc .'">' . $item['link']['title'] . '</a>';
+            
+            if (!empty($item['below'])){
+                $page_content .= __build_menu($item['below'],1);
+            }
+            
+            $page_content .= '</li>';
+        }
+    }
+    
+    $page_content .= '</ul>';
+    
+    return $page_content; 
+}
+
+function site_contact_admin() {
+    
+    $form = array();
+    
+    /*
+    * Contact Details
+    */
+    $contact = variable_get('contact', array());
+    
+    $form['contact'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Contact Details'),
+        '#tree' => TRUE,
+    );
+    
+    //$form['contact']['email'] = array(
+    //    '#type' => 'textfield',
+    //    '#title' => t('Email'),
+    //    '#default_value' => $contact['email'],
+    //    '#size' => 60,
+    //    '#maxlength' => 80,
+    //    '#description' => t("Email address for footer"),
+    //    '#required' => TRUE,
+    //);
+    //
+    //$form['contact']['telephone'] = array(
+    //    '#type' => 'textfield',
+    //    '#title' => t('Telephone'),
+    //    '#default_value' => $contact['telephone'],
+    //    '#size' => 20,
+    //    '#maxlength' => 30,
+    //    '#description' => t("Telephone number for footer."),
+    //    '#required' => TRUE,
+    //);
+    
+    $form['contact']['address'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Address'),
+        '#cols' => 40,
+        '#rows' => 5,
+        '#default_value' => $contact['address'],
+        '#description' => t("Address for contact / footer page."),
+        '#required' => TRUE,
+    );
+    
+    //$form['contact']['company_number'] = array(
+    //    '#type' => 'textfield',
+    //    '#title' => t('Company Number'),
+    //    '#default_value' => $contact['company_number'],
+    //    '#size' => 20,
+    //    '#maxlength' => 30,
+    //    '#description' => t("Company Number number for footer."),
+    //    '#required' => TRUE,
+    //);
+    
+    return system_settings_form($form);
+}

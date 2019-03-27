@@ -1,0 +1,207 @@
+/*  ========================================================================
+    Layout CSS
+    ========================================================================    */
+
+        html {
+            height: 100%;
+            background: #005f2c;
+        }
+        
+            body {
+                height: 100%;
+                background: #00512c;
+                background: -moz-linear-gradient(top, #00512c 0%, #005f2c 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00512c), color-stop(100%,#005f2c));
+                background: -webkit-linear-gradient(top, #00512c 0%,#005f2c 100%);
+                background: -o-linear-gradient(top, #00512c 0%,#005f2c 100%);
+                background: -ms-linear-gradient(top, #00512c 0%,#005f2c 100%);
+                background: linear-gradient(top, #00512c 0%,#005f2c 100%);
+            }
+            
+            .ie body, .ie9 body {
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00512c', endColorstr='#005f2c',GradientType=0 );
+            }
+    
+        /* Content
+        ------------------------------------------------------------------------    */
+            #animation-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                overflow: hidden;
+                width: 100%;
+                z-index: 1;
+            }
+            
+                #page-container {
+                    position: relative;
+                    margin: 0 auto;
+                    padding: 0;
+                    height: 74%;
+                    max-width: 1280px;
+                    min-height: 500px;
+                    z-index: 10;
+                }
+                
+                    #page-content {
+                        position: relative;
+                        padding: 0;
+                        margin: 0 20px;
+                        height: 100%;
+                    }
+                    
+                        .img-div {
+                            position: absolute;
+                        }
+                        
+                            .img-div img {
+                                margin: 0 0 -7px;
+                            }
+                        
+                        #nav-content {
+                            position: absolute;
+                            bottom: 5%;
+                            left: 30px;
+                        }
+                        
+                        /*#text-content-container {*/
+                        /*    position: absolute;*/
+                        /*    right: 0;*/
+                        /*    bottom: 0;*/
+                        /*    width: 100%;*/
+                        /*    height: 100%;*/
+                        /*    overflow: hidden;*/
+                        /*    background-image: url('/sites/all/themes/wynnglobal/assets/images/single-banner.png');*/
+                        /*    background-repeat: no-repeat;*/
+                        /*    background-size: 75%;*/
+                        /*    background-position: top 18% center;*/
+                        /*}*/
+                        
+                        #text-content {
+                            position: absolute;
+                            bottom: -100%;
+                            right: 30px;
+                            width: 38%;
+                            height: 38%;
+                            padding: 15px;
+                            z-index: 2;
+                            -webkit-border-radius: 15px 15px 0 0;
+                            -moz-border-radius: 15px 15px 0 0;
+                            border-radius: 15px 15px 0 0;
+                            background: #005f2c;
+                            background: -moz-linear-gradient(top, #005f2c 0%, #00512c 100%);
+                            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#005f2c), color-stop(100%,#00512c));
+                            background: -webkit-linear-gradient(top, #005f2c 0%,#00512c 100%);
+                            background: -o-linear-gradient(top, #005f2c 0%,#00512c 100%);
+                            background: -ms-linear-gradient(top, #005f2c 0%,#00512c 100%);
+                            background: linear-gradient(top, #005f2c 0%,#00512c 100%);
+                        }
+                        
+                        .ie #text-content {
+                            -pie-background: linear-gradient(#005f2c, #00512c);
+                            behavior: url("/sites/all/themes/wynnglobal/assets/js/libs/PIE.htc");
+                        }
+                        
+                        .ie7 #text-content {
+                            margin-bottom: -1px;
+                        }
+                        
+                        .ie9 #text-content {
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005f2c', endColorstr='#00512c',GradientType=0 );
+                        }
+                        
+                            #text-content-scroll {
+                                height: 93%;
+                                font: normal 0.85em sans-serif;
+                                line-height: 1.6em;
+                            }
+                            
+                                #text-content-scroll p:last-child {
+                                    margin: 0;
+                                }
+        
+        /* Header
+        ------------------------------------------------------------------------    */
+        
+            #page-header {
+                position: absolute;
+                left: 50px;
+                top: 0;
+                right: 50px;
+                height: 120px;
+                z-index: 20;
+            }
+        
+        /* Footer
+        ------------------------------------------------------------------------    */
+        
+            #page-footer {
+                position: relative;
+                z-index: 5;
+                font: normal 0.7em 'MyriadPro', sans-serif;
+                margin: 0 auto;
+                max-width: 1280px;
+                height: 26%;
+            }
+            
+                #page-footer-inner {
+                    height: 100%;
+                    margin: 0 30px;
+                    -webkit-border-radius: 15px 15px 0 0;
+                    -moz-border-radius: 15px 15px 0 0;
+                    border-radius: 15px 15px 0 0;
+                    background: #00512c;
+                    background: -moz-linear-gradient(top, #00512c 0%, #005f2c 100%);
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00512c), color-stop(100%,#005f2c));
+                    background: -webkit-linear-gradient(top, #00512c 0%,#005f2c 100%);
+                    background: -o-linear-gradient(top, #00512c 0%,#005f2c 100%);
+                    background: -ms-linear-gradient(top, #00512c 0%,#005f2c 100%);
+                    background: linear-gradient(top, #00512c 0%,#005f2c 100%);
+                }
+                
+                .ie #page-footer-inner {
+                    -pie-background: linear-gradient(#00512c, #005f2c);
+                    behavior: url("/sites/all/themes/wynnglobal/assets/js/libs/PIE.htc");
+                }
+                
+                .ie9 #page-footer-inner {
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00512c', endColorstr='#005f2c',GradientType=0 );
+                }
+                
+                    #footer-image-container ul {
+                        position: relative;
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                    
+                        #footer-image-container ul li {
+                            position: relative;
+                            width: 16%;
+                            margin: 2%;
+                        }
+                        
+                        .ie7 #footer-image-container ul li {
+                            width: 15.9%;
+                        }
+                        
+                             #footer-image-container img {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                margin: 0;
+                            }
+                
+                #disclaimer-container {
+                    clear: both;
+                    padding: 7% 0 0;
+                }
+                
+                    #disclaimer-container p {
+                        width: 77%;
+                        margin: 20px auto;
+                        line-height: 1.6em;
+                        color: #ffffff;
+                    }
