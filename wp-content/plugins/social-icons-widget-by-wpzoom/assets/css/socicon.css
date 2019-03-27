@@ -443,6 +443,15 @@
     content: "\e901"
 }
 
+.socicon-homeadvisor {
+    background-color: #EF8B1D;
+    color: #EF8B1D;
+}
+
+.socicon-homeadvisor:before {
+    content: "\e915"
+}
+
 .socicon-houzz {
     background-color: #7CC04B;
     color: #7CC04B;
@@ -462,8 +471,8 @@
 }
 
 .socicon-instagram {
-    background-color: #E1306C;
-    color: #E1306C;
+    background-color: #e4405f;
+    color: #e4405f;
 }
 
 .socicon-instagram:before {
@@ -576,6 +585,15 @@
 
 .socicon-myspace:before {
     content: "\e04c"
+}
+
+.socicon-mywed {
+    background-color: #000;
+    color: #000;
+}
+
+.socicon-mywed:before {
+    content: "\e908"
 }
 
 .socicon-newsvine {
@@ -812,6 +830,15 @@
     content: "\e037"
 }
 
+.socicon-stitcher {
+    background-color: #00BDE8;
+    color: #00BDE8;
+}
+
+.socicon-stitcher:before {
+    content: "\e907"
+}
+
 .socicon-strava {
     background-color: #FC4C02;
     color: #FC4C02;
@@ -905,6 +932,15 @@
     content: "\e059"
 }
 
+.socicon-tunein {
+    background-color: #36b4a7;
+    color: #36b4a7;
+}
+
+.socicon-tunein:before {
+    content: "\e90a"
+}
+
 .socicon-twitter {
     background-color: #55acee;
     color: #55acee;
@@ -920,7 +956,7 @@
 }
 
 .socicon-unsplash:before {
-    content: "\e914"
+    content: "\e90b"
 }
 
 .socicon-udemy {

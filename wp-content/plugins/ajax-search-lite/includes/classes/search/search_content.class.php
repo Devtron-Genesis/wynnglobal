@@ -571,7 +571,8 @@ if ( ! class_exists( 'wpdreams_searchContent' ) ) {
             // Dont select excerpt if its not used at all
             $select_excerpt = (
                 w_isset_def($sd['titlefield'], 0) == 1 ||
-                w_isset_def($sd['descriptionfield'], 0) == 1
+                w_isset_def($sd['descriptionfield'], 0) == 1 ||
+                wd_in_array_r('excerpt', $this->imageSettings)
             ) ? $wpdb->posts. ".post_excerpt" : "''";
             /*---------------------------------------------------------------*/
 
@@ -1156,8 +1157,7 @@ if ( ! class_exists( 'wpdreams_searchContent' ) ) {
          * @param $post WP_POst Post object
          * @return string image URL
 		 */
-		function getBFIimage( $post ) {
-            $sd = $this->searchData;
+		protected function getBFIimage( $post ) {
 
 			if ( ! isset( $post->image ) || $post->image == null ) {
 
@@ -1179,11 +1179,7 @@ if ( ! class_exists( 'wpdreams_searchContent' ) ) {
 							}
 							break;
 						case "content":
-                            if ( $sd['showdescription'] == 0 )
-                                $content = get_post_field('post_content', $post->id);
-                            else
-                                $content = $post->content;
-                            $content = apply_filters('the_content', $content);
+                            $content = apply_filters('the_content', get_post_field('post_content', $post->id));
 
 							$im = wpdreams_get_image_from_content( $content, 0 );
 							if ( is_multisite() ) {
@@ -1191,7 +1187,9 @@ if ( ! class_exists( 'wpdreams_searchContent' ) ) {
 							}
 							break;
 						case "excerpt":
-							$im = wpdreams_get_image_from_content( $post->excerpt, 0 );
+                            $excerpt = get_post_field('post_excerpt', $post->id);
+
+							$im = wpdreams_get_image_from_content( $excerpt, 0 );
 							if ( is_multisite() ) {
 								$im = str_replace( home_url(), network_home_url(), $im );
 							}

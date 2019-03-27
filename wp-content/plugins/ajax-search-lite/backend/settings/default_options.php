@@ -46,7 +46,7 @@ function asl_do_init_options() {
         'theme' => 'simple-red',
         'override_search_form' => 0,
         'override_woo_search_form' => 0,
-        'keyword_logic' => "AND",
+        'keyword_logic' => "and",
         'trigger_on_facet_change' => 1,
         'redirect_click_to' => 'results_page',
         'redirect_enter_to' => 'results_page',
