@@ -33,8 +33,8 @@ jQuery(function($){
         var fullteplata_footer = $('#footer-widget').height();
         $('.full-width-page-banner').css('height', intViewportHeight+'px');
         $('.carousel.slide .carousel-inner .carousel-item').css('height', intViewportHeight+'px');
-        $('.n2-section-smartslider').css('height', intViewportHeight-50+'px').css('overflow', 'hidden');
-        $('.n2-ss-slider-3.n2-ow').css('height', intViewportHeight-50+'px');
+        $('.n2-section-smartslider').css('height', intViewportHeight+'px').css('overflow', 'hidden');
+        $('.n2-ss-slider-3.n2-ow').css('height', intViewportHeight+'px');
         var meet_client_page_height  = $('body.page-id-405').height();
         $('.modal-outer').css('height', intViewportHeight+'px');
         $('.modal-iner').css('height', intViewportHeight-150+'px').css('overflow-x', 'hidden').css('overflow-y', 'auto');
