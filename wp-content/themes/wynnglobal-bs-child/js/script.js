@@ -1,45 +1,4 @@
 jQuery(function($){
-
-
-	$(window).resize(function(){
-        var intViewportHeight = window.innerHeight;
-        // Set footer slide height equal to footer height
-        var static_footer_height = $('div#footer-widget').height();
-        $('.home .site-info .contents-inner').css('height', static_footer_height+'px');
-        $('.home .site-info .contents-inner .container').css('height', static_footer_height-60+'px');
-        if($( window ).width() < $( window ).height()) {
-            if($(window ).width() < 768){
-                $('.home .site-info .contents-inner').css('height', static_footer_height+'px');
-                $('.home .site-info .contents-inner .container').css('height', static_footer_height-30+'px');
-            }
-        }
-        $('.page-id-405 .site-info .contents-inner').css('height', 170+'px');
-
-        // Bottom Footer Slide
-        var winheight = $(window).height();
-        $('.page-template-fullwidth .site-info').css('height', intViewportHeight/1.8+'px');
-        $('.page-template-fullwidth .site-info #main').children('.container').css('height', intViewportHeight/1.8-100+'px').css('overflow', 'auto').css('padding', '20px 0px');
-        if($( window ).width() < $( window ).height()) {
-            if($(window ).width() < 768){
-                $('.page-template-fullwidth .site-info').css('height', static_footer_height+10+'px');
-                $('.page-template-fullwidth .site-info #main').children('.container').css('height', static_footer_height-90+'px').css('overflow', 'auto').css('padding', '20px 0px');
-            }
-        }
-        var bottom_slider_height = $('.site-info').height();
-        var bottom_slider_actual_height = '-'+(bottom_slider_height-50)+'px';
-        $('.site-info').css('bottom', bottom_slider_actual_height);
-
-        // Manage Slider & Slider Overlay Height & banner height
-        var fullteplata_footer = $('#footer-widget').height();
-        $('.full-width-page-banner').css('height', intViewportHeight+'px');
-        $('.carousel.slide .carousel-inner .carousel-item').css('height', intViewportHeight+'px');
-        $('.n2-section-smartslider').css('height', intViewportHeight+'px').css('overflow', 'hidden');
-        $('.n2-ss-slider-3.n2-ow').css('height', intViewportHeight+'px');
-        var meet_client_page_height  = $('body.page-id-405').height();
-        $('.modal-outer').css('height', intViewportHeight+'px');
-        $('.modal-iner').css('height', intViewportHeight-150+'px').css('overflow-x', 'hidden').css('overflow-y', 'auto');
-	});
-
   $(document).ready(function() {
     var intViewportHeight = window.innerHeight;
     
