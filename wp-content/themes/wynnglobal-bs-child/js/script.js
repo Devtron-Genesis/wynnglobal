@@ -114,8 +114,8 @@ jQuery(function($){
     $('.n2-section-smartslider').css('height', intViewportHeight+'px').css('overflow', 'hidden');
     $('.n2-ss-slider-3.n2-ow').css('height', intViewportHeight+'px');
     var meet_client_page_height  = $('body.page-id-405').height();
-    $('.modal-outer').css('height', winheight+'px');
-    $('.modal-iner').css('height', winheight-150+'px').css('overflow-x', 'hidden').css('overflow-y', 'auto');
+    $('.modal-outer').css('height', intViewportHeight+'px');
+    $('.modal-iner').css('height', intViewportHeight-150+'px').css('overflow-x', 'hidden').css('overflow-y', 'auto');
     $('.site-info ul.carousel-indicators .row').css('height', winheight/2-70+'px').css('overflow', 'overlay');
     $('.page-template-fullwidth div#footer-widget .tab p').trigger('click');
   });

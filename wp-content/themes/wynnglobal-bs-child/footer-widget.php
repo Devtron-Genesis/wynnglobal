@@ -45,7 +45,7 @@ if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_ac
                                         </div>
                                         <div class="box box-4 col-12 col-md-3">
                                             <h3>Strategic Partners</h3>
-                                            <p>Our Strategic Partners gain our expert knowledge, access to our highly sought after product portfolio, operational support, training programmes, conventions and more. Contact us today!</p>
+                                            <p>Our Strategic Partners gain our expert knowledge, access to our highly sought-after product portfolio, operational support, training programmes, conventions and more. Contact us today!</p>
                                         </div> 
                                     </div>
                                 </div>
